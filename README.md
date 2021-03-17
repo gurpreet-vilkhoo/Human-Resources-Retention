@@ -1,11 +1,12 @@
 ### Human-Resources-Retention
-### Purpose:Figuring out which employees may quit using Machine Learning and Deep Learning
+#### Purpose: Figuring out which employees may quit using Machine Learning and Deep Learning
 
 #### Step 1- Load the Main HR Database Records
 
 #### Step 2- Load the Evaluation and Employee Satisfaction Data
 
 #### Step 3- Join the datasets on Employee id
+
 main_df = hr_df.set_index('employee_id').join(emp_satis_eval.set_index('EMPLOYEE #'))
 
 main_df = main_df.reset_index()
@@ -20,19 +21,19 @@ main_df = main_df.reset_index()
 
 -Split the dataset in 70:30 ratio 
 
-- Normalize the data using StandardScalar
+-Normalize the data using StandardScalar
 
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
 ### LOGISTIC REGRESSION MODEL
 
-#### Accuracy,Confusion matrix and Classification report
+#### Accuracy, Confusion matrix and Classification report
 ![image](https://user-images.githubusercontent.com/80466173/111455285-9e161680-873b-11eb-9106-bdf27ddb7408.png)
 
 ### RANDOM FOREST CLASSIFIER
 
-#### Accuracy,Confusion matrix and Classification report
+#### Accuracy, Confusion matrix and Classification report
 ![image](https://user-images.githubusercontent.com/80466173/111455345-aff7b980-873b-11eb-857f-61b61cd55a5d.png)
 
 
